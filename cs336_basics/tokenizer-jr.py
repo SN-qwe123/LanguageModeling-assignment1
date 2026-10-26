@@ -7,6 +7,7 @@ def train_bpe(text, vocab_size):
     for i in range(256):
         vocab[i] = bytes([i])
 
+    #print(vocab)
     merges = []
 
     # Step 2: Convert text into byte sequences
@@ -16,6 +17,8 @@ def train_bpe(text, vocab_size):
         byte_data = word.encode("utf-8")
         byte_list = list(byte_data)
         words.append(byte_list)
+
+    print(words)
 
     # Step 3: BPE training loop
     while len(vocab) < vocab_size:
