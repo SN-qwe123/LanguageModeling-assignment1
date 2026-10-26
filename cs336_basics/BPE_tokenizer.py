@@ -39,7 +39,7 @@ def train_bpe(text: str, vocab_size: int):
             ),
         )
 
-        a, b = best_pair
+        a, b = best_pair #unpacking
 
         # Create a new token
         new_id = len(vocab)
@@ -81,7 +81,7 @@ def train_bpe(text: str, vocab_size: int):
 
 
 # Example
-text = "low low low lower lower newest"
+text = "app app app apple apple application"
 
 vocab, merges = train_bpe(text, vocab_size=261)
 
